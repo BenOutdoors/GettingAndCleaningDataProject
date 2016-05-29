@@ -25,6 +25,8 @@ The original data is in a number of different files:
 * X_train.txt                 (the normalized observation data and some stats from observations like “mean”)
 * y_train.txt                 (data file with another column for the X data files, the activity # 1 through 6)
 
+For ease of use the data was kept in the original directory tree from the .zip file; place the */UCI HAR Dataset* directory in your working directory.
+
 The first section of the script constructs a data set that combines the observations of all subjects in both the "test" group and the "train" group. Data set columns (variables) are named and the "activity" number codes are replaced with the descriptive activity labels
 * 1 = WALKING
 * 2 = WALKING_UPSTAIRS
