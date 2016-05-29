@@ -1,10 +1,8 @@
 ## CodeBook for Getting and Cleaning Data Final project data files
-
-
-
-
+**_No units were altered_** The original README data units deatiled below are still valid for the new averages data set: *tidy_avgs_data.txt*
 
 ## Original README file that details the starting data:
+```
 ==================================================================
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
@@ -75,3 +73,4 @@ Use of this dataset in publications must be acknowledged by referencing the foll
 This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
+```
