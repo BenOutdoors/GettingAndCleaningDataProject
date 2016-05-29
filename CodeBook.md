@@ -1,5 +1,7 @@
 ## CodeBook for Getting and Cleaning Data Final project data files
-**_No units were altered_** The original README data units deatiled below are still valid for the new averages data set: *tidy_avgs_data.txt*
+**_No units were altered_** 
+
+The original README data units deatiled below are still valid for the new averages data set: *tidy_avgs_data.txt*
 
 ## Original README file that details the starting data:
 ```
