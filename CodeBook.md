@@ -2,8 +2,13 @@
 **_No units were altered_** 
 
 The original README data units deatiled below are still valid for the new averages data set: *tidy_avgs_data.txt*
+Two new variables were added/altered:
 
-## Original README file that details the starting data:
+*subject* ID is now included in the concatenated data set
+
+*activity* is also included in the concatenated data set and is a descriptive character string (i.e. "WALKING" instead of "1")
+
+## Original README file that details the starting data and units:
 ```
 ==================================================================
 Human Activity Recognition Using Smartphones Dataset
