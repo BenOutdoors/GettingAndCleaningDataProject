@@ -6,6 +6,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ## Getting the Data
 *The original data is in a number of different files:*
 activity_labels.txt     (numbers indicating the activity)
+
 features.txt               (column, i.e. “variable”, names for the “X” data files)
 subject_test.txt        (test subject identifier, i.e. one of the study volunteers)
 X_test.txt                  (the normalized observation data and some stats from observations like “mean”)
