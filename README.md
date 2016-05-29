@@ -1,5 +1,6 @@
 # GettingAndCleaningDataProject
 **_Ben K._**
+
 **_May 2016_**
 ## Overview
 This file describes the operations in the *run_analysis.R script*. Essentially the script takes data from the **Human Activity Recognition Using Smartphones Dataset**[1] combines it, adds some descriptive names, and subsets out the mean and standard deviation variables. From the data set of means and stdDevs a new tidy data set that has only the average value of each variable, for each subject, for each activity is created. 
@@ -58,10 +59,23 @@ X_train <- cbind(X_train, y_train, subject_train)
 X_all <- rbind(X_train, X_test) 
 # X_all is the complete, merged data set of X_test and X_train. Includes data from all subjects
 ```
-Now the seperate data files have been combined into a single data frame, with descriptive names.  Next the 
-
-
-
+Now the seperate data files have been combined into a single data frame, with descriptive names.  Next mean and stdDev columns are subsetted out to create the data frame of only "mean" and "std" variables.  The subsetted data is orderd by subject number.
+```
+## Select only the "mean" and "std" data columns
+# find the names that include "mean" or "std"
+means_and_stds <- c("subject", "activity", grep("mean|std", colnames(X_all), value = TRUE))
+# subset X_all to get just the mean and std data, order by "subject"
+X_mean_std <- arrange(X_all[means_and_stds], subject)
+```
+*X_mean_std* is the appropriately labeled data set of means and stdDev data. From this a new tidy data set is created containing only the average value of each remaining variable, for each subject, for each activity.
+```
+## Using X_mean_std, produce a seperate data set with the average value of each variable, for each subject, for each activity
+# first melt the data frame, then use dcast to create the variable averages
+moltenX_mean_std <- melt(X_mean_std, id.vars = c("subject", "activity"))
+tidy_X_avgs <- dcast(moltenX_mean_std, subject + activity ~ variable, mean)
+# write the tidy data set to a file
+write.table(tidy_X_avgs, file = "tidy_avgs_data.txt")
+```
 
 ##References
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
