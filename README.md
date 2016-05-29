@@ -76,6 +76,7 @@ tidy_X_avgs <- dcast(moltenX_mean_std, subject + activity ~ variable, mean)
 # write the tidy data set to a file
 write.table(tidy_X_avgs, file = "tidy_avgs_data.txt")
 ```
+The resulting data is stored in the file: *tidy_avgs_data.txt*
 
 ##References
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
