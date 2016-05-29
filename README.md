@@ -1,4 +1,5 @@
 # GettingAndCleaningDataProject
+**_Ben K._**
 ## Overview
 This file describes the operations in the *run_analysis.R script*. Essentially the script takes data from the **Human Activity Recognition Using Smartphones Dataset**[1] combines it, adds some descriptive names, and subsets out the mean and standard deviation variables. From the data set of means and stdDevs a new tidy data set that has only the average value of each variable, for each subject, for each activity is created. 
 The original data can be found here:
